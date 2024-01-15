@@ -34,14 +34,14 @@ Unicorn Tears\n
 *********************************** \n""")
 
 userOrder = []
-userInput = input("""> """)
-userOrder.append(userInput)
-print(f"**{userOrder.count(userInput)} order of {userInput} has been added to your meal**")
 
-while userInput != "quit":
+while True:
   userInput = input("""> """)
+  
+  if userInput == "quit":
+    break
+
   userOrder.append(userInput)
-  # print(userOrder)
   if userOrder.count(userInput) == 1:
     print(f"**1 order of {userInput} has been added to your meal**")
   elif userOrder.count(userInput) > 1:
